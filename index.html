@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <title>My weather application</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <div class="form-group">
+        <form id="user-form">
+            <input id="city-input" type="search" placeholder="Enter a city.." required/>
+            <input type="submit" value="Search" class="btn"/>
+        </form>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <div class="current-weather">
+            <div class="Nairobi">
+                <h1 id="city-name">Nairobi</h1>
+                <p>
+                    <span id="current-date"></span>, moderate rain <br/>
+                    Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+                </p>
+            </div>
+            <div class="deg">☀️ 27°<span class="unit">C</span></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>
+            This project was coded by
+            <a href="#" target="_blank">Lili K</a> and is
+            <a href="#" target="_blank"> on GitHub</a> and
+            <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js">
+</script>
+</body>
+</html>
