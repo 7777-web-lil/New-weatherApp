@@ -7,13 +7,13 @@ body {
 }
 
 .container{
-    width: 600px;
+    width: 550px;
     background-color: white;
     display: block;
     text-align: center;
     margin: 40px auto;
-    padding: 20px 40px;
-    border-radius:10px;
+    padding: 10px 30px;
+    border-radius:15px;
     box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
 .header{
@@ -30,7 +30,7 @@ form {
 form input[type="search"] {
     flex: 1;
     padding: 20px 14px;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: #f0edfc;
     border: 1px solid #ccc;
     margin-top: 20px;
@@ -39,7 +39,7 @@ form input[type="search"] {
 }
 form input[type="submit"] {
     padding: 17px 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     border: none;
     margin-top: 20px;
     background-color: #d97aea;
@@ -59,14 +59,15 @@ div {
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     font-weight: 150;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .Nairobi strong{
     color: #c94255;
 }
 
 .deg {
+    margin-top: 20px;
     font-size: 70px;
     font-weight: bold;
 
@@ -78,7 +79,7 @@ div {
 }
 footer{
     border-top: 1px solid #fbf9f9;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: 200;
