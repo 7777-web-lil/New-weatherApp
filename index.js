@@ -62,6 +62,30 @@ userForm.addEventListener("submit", (e)=>{
 
 
 })
+
+function displayForecast() {
+    let days = ["Tue", "wed", "Thur", "Fri", "Sat"]
+    let forecastHtml = ""
+    days.forEach((day) => {
+        forecastHtml +=
+        `<div class="forecast-day">
+                <div class="forecast-date">${day}</div>
+                <div class="forecast-icon">🌤️</div>
+                <div class="forecast-temperatures">
+                    <div class="forecast-temperature">
+                        <strong>15º</strong>
+                    </div>
+                    <div class="forecast-temperature">9º</div>
+                </div>
+                </div>`
+
+
+    })
+    let forecast= document.querySelector("#weather-forecast")
+    forecast.innerHTML=forecastHtml
+}
+displayForecast()
+
 let now = new Date();
 
 let days = [
