@@ -30,6 +30,8 @@ function searchCity(cityInput) {
 
         let currentTime = `${day} ${hours}:${minutes}`;
         document.querySelector("#current-date").innerHTML = currentTime;
+        console.log("API time:", res.data.time);
+        console.log("Rendered time:", currentTime);
 
         document.querySelector("#description").innerHTML =
             res.data.condition.description;
@@ -38,7 +40,7 @@ function searchCity(cityInput) {
             `${res.data.temperature.humidity}%`;
 
         document.querySelector("#wind").innerHTML =
-            `${res.data.wind.speed} m/s`;
+            `${res.data.wind.speed} km/h`;
 
         let weatherIcons = {
             "clear-sky-day": "☀️",
