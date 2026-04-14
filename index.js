@@ -41,7 +41,7 @@ function searchCity(cityInput) {
             `${res.data.temperature.humidity}%`;
 
         document.querySelector("#wind").innerHTML =
-            `${res.data.wind.speed} M\S`;
+            `${res.data.wind.speed} m/s`;
 
         let iconUrl = res.data.condition.icon_url;
 
