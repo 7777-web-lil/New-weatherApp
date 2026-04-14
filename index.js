@@ -1,7 +1,8 @@
 function searchCity(cityInput) {
     let cityName = document.querySelector("#city-name");
 
-    let sheApis = `https://api.shecodes.io/weather/v1/current?query=${cityInput}&units=metric&key=65foc199tb00f3ddbce1a005364275f2`;
+    let sheApis =
+        `https://api.shecodes.io/weather/v1/current?query=${cityInput}&units=metric&key=65foc199tb00f3ddbce1a005364275f2`;
 
     axios.get(sheApis).then((res) => {
         let temp = Math.round(res.data.temperature.current);
@@ -40,23 +41,13 @@ function searchCity(cityInput) {
             `${res.data.temperature.humidity}%`;
 
         document.querySelector("#wind").innerHTML =
-            `${res.data.wind.speed} km/h`;
+            `${res.data.wind.speed} M\S`;
 
-        let weatherIcons = {
-            "clear-sky-day": "☀️",
-            "few-clouds-day": "🌤️",
-            "scattered-clouds-day": "☁️",
-            "broken-clouds-day": "☁️",
-            "rain-day": "🌧️",
-            "shower-rain-day": "🌧️",
-            "thunderstorm-day": "⛈️",
-            "snow-day": "❄️",
-            "mist-day": "🌫️"
-        };
+        let iconUrl = res.data.condition.icon_url;
 
-        let icon = weatherIcons[res.data.condition.icon] || "☀️";
         document.querySelector(".deg").innerHTML =
-            `${icon} ${temp}°<span class="unit">C</span>`;
+            `<img src="${iconUrl}" alt="${res.data.condition.description}" width="60" />
+           ${temp}°<span class="unit">C</span>`;
 
         let forecastApi = `https://api.shecodes.io/weather/v1/forecast?query=${res.data.city}&units=metric&key=65foc199tb00f3ddbce1a005364275f2`;
 
@@ -67,12 +58,12 @@ function searchCity(cityInput) {
                 if (index < 5) {
                     let forecastDate = new Date(day.time * 1000);
                     let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-                    let forecastIcon = weatherIcons[day.condition.icon] || "☀️";
 
                     forecastHtml += `
                         <div class="forecast-day">
                             <div class="forecast-date">${forecastDays[forecastDate.getDay()]}</div>
-                            <div class="forecast-icon">${forecastIcon}</div>
+                            <div class="forecast-icon"> 
+                             <img src="${day.condition.icon_url}" alt="${day.condition.description}" width="42" /></div>
                             <div class="forecast-temperatures">
                                 <div class="forecast-temperature">
                                     <strong>${Math.round(day.temperature.maximum)}°</strong>
