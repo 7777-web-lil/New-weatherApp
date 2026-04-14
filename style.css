@@ -38,8 +38,8 @@ form input[type="search"] {
     font-size: 15px;
 }
 form input[type="submit"] {
-    padding: 10px 40px;
-    border-radius: 10px;
+    padding: 5px 30px;
+    border-radius: 15px;
     border: none;
     margin-top: 20px;
     background-color: #d97aea;
